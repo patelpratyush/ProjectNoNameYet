@@ -14,5 +14,14 @@ export default defineConfig([
       'react-hooks/preserve-manual-memoization': 'off',
     },
   },
-  globalIgnores(['.next/**', 'out/**', 'build/**', 'node_modules*/**', 'next-env.d.ts']),
+  globalIgnores([
+    '.next/**',
+    '.turbo/**',
+    '.worktrees/**',
+    'out/**',
+    'build/**',
+    'node_modules*/**',
+    'next-env.d.ts',
+    '**/*.tsbuildinfo',
+  ]),
 ])

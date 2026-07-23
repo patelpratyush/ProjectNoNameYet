@@ -6,6 +6,7 @@ const packageJson = JSON.parse(readFileSync(new URL('../package.json', import.me
 const root = new URL('../', import.meta.url)
 
 test('package uses Next.js without Vite or React Router', () => {
+  assert.match(packageJson.dependencies.next, /^\^16\./)
   assert.equal(packageJson.scripts.dev, 'next dev')
   assert.equal(packageJson.scripts.build, 'next build')
   assert.equal(packageJson.scripts.start, 'next start')
